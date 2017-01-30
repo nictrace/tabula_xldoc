@@ -1,7 +1,7 @@
 {
   "name": "excel-app",
   "author": "Nictrace <admin@tecman.ru>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeJS Excel files parser & builder",
   "main": "lib/index.js",
   "scripts": {
