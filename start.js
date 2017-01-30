@@ -45,9 +45,16 @@ xlDoc.prototype.checksign = function() {
 
 module.exports = xlDoc;
 
-var xls = new xlDoc('test/price.xls');
-var json_data = xls.parse(callback);
-console.log(json_data);
+var xls = new xlDoc('test/z1.doc');
+
+var json_data;
+try{
+ json_data = xls.parse(callback);
+}
+catch(err){
+	console.warn('parse error');
+}
+if(json_data != undefined) console.log(json_data);
 
 function callback(txt) {
   console.warn('ERROR:'+ txt);
