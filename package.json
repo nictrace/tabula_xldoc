@@ -1,0 +1,22 @@
+{
+  "name": "excel-app",
+  "author": "Nictrace <admin@tecman.ru>",
+  "version": "0.0.1",
+  "description": "NodeJS Excel files parser & builder",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": "github:mgcrea/node-xlsx",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-xlsx": "^0.7.4"
+  },
+  "keywords": [
+    "excel",
+    "parser",
+    "builder",
+    "xlsx",
+    "xls"
+  ]
+}
