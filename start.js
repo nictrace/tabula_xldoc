@@ -20,22 +20,22 @@ xlDoc.prototype.parse = function(cbError) {
 	 }
 	 else{
 //	  	 console.warn('file format invald!');
-	  	 cbError('file format invalid');
+	  	 if(cbError != undefined) cbError('file format invalid');
 	  	 return '';
 	   }
   }
   else{
 //      console.warn('file %s not found',this.file);
-      cbError('file not found');
+      if(cbError != undefined) cbError('file not found');
       return '';
   }
 };
 
 xlDoc.prototype.checksign = function() {
-	var bytes = new Buffer(16);
+   var bytes = new Buffer(16);
    var fd = fs.openSync(this.file, 'r');
    fs.readSync(fd,bytes,0,4,0);
-   t = bytes.readUInt32BE();
+   var t = bytes.readUInt32BE();
    //console.log('checksign: '+ bytes.readInt32BE().toString(16));
    if(t == 0x504b0304) return true;			// xlsx опознан
    // далее надо проверить на соответствие формату xls
